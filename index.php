@@ -25,7 +25,11 @@
 
     <div class="main">
         <div class="container">
-           
+            <div class="left">
+                <?php include('includes/left.php'); ?>
+            </div>
+
+ 
 
             <div class="right">
                 <?php include('includes/right.php'); ?>
