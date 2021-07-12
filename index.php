@@ -24,17 +24,17 @@
     </div>
 
 
-            <div class="left">
+            
                 <?php include('includes/left.php'); ?>
-            </div>
+     
 
-            <div class="middle">
+           
                 <?php include('chuyentrang.php'); ?>
-            </div>
+         
 
-            <div class="right">
+        
                 <?php include('includes/right.php'); ?>
-            </div>
+        
 
 
     <div class="footer">
