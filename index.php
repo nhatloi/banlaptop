@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="header sticky-top">
-        <?php include('includes/header.php'); ?>
+        <?php include('./includes/header.php'); ?>
     </div>
 
     <div class="main">
@@ -30,11 +30,11 @@
             </div>
 
             <div class="middle">
-                <?php include('chuyentrang.php'); ?>
+                <?php include('./chuyentrang.php'); ?>
             </div>
 
             <div class="right">
-                <?php include('includes/right.php'); ?>
+                <?php include('./includes/right.php'); ?>
             </div>
         </div>
     </div>
