@@ -1,8 +1,8 @@
 <?php
     $severName = "MYSQL5045.site4now.net";
-    $userSever = "a771dd_dtdm";
+    $userSever = "a771dd_laptop";
     $passServer = "1q2w3e4r";
-    $dbName = "db_a771dd_dtdm";
+    $dbName = "db_a771dd_laptop";
 
     $conn = mysqli_connect($severName, $userSever, $passServer, $dbName);
 
