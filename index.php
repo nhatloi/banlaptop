@@ -23,19 +23,19 @@
         <?php include('includes/header.php'); ?>
     </div>
 
-    <div class="main">
-        <div class="container">
+
             <div class="left">
                 <?php include('includes/left.php'); ?>
             </div>
 
- 
+            <div class="middle">
+                <?php include('chuyentrang.php'); ?>
+            </div>
 
             <div class="right">
                 <?php include('includes/right.php'); ?>
             </div>
-        </div>
-    </div>
+
 
     <div class="footer">
         <?php include('includes/footer.php'); ?>
