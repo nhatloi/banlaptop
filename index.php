@@ -25,7 +25,9 @@
 
     <div class="main">
         <div class="container">
-           
+            <div class="left">
+                <?php include('includes/left.php'); ?>
+            </div>
 
             <div class="middle">
                 <?php include('chuyentrang.php'); ?>
