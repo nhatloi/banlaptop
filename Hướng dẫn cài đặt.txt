@@ -3,6 +3,7 @@ B1: Cài đặt phần mềm xampp (link cài đặt: https://www.apachefriends.
 B2: Coppy file worldlap bỏ vào link mặc định : C:\xampp\htdocs
 B3: Khởi động phần mềm xampp, nhần start của dòng đầu tiên
 B4: Khởi động trang web theo đường link : http://localhost/WorldLap/
+B5: Khởi động trang web admin theo đường link : http://localhost/WorldLap/admin
 
 TK user test: tranthanh/congaden
 TK admin: admin/admin
