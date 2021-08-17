@@ -1,0 +1,16 @@
+Hướng dẫn cài đặt:
+B1: Cài đặt phần mềm xampp (link cài đặt: https://www.apachefriends.org/download.html)
+B2: Coppy file worldlap bỏ vào link mặc định : C:\xampp\htdocs
+B3: Khởi động phần mềm xampp, nhần start của dòng đầu tiên
+B4: Khởi động trang web theo đường link : http://localhost/WorldLap/
+
+TK user test: tranthanh/congaden
+TK admin: admin/admin
+
+
+link demo :https://banlaptop.herokuapp.com/
+link github:https://github.com/nhatloi/banlaptop
+
+link adminmysql: https://mysql.site4now.net/
+Server=MYSQL5045.site4now.net;Database=db_a78b0e_worldl;Uid=a78b0e_worldl;Password=1q2w3e4r"
+TK database: WorldLap/22023794@abc
