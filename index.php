@@ -1,46 +1,56 @@
 <?php
-    session_start();
-    include('dbconfig.php');
+
+session_start();
+ob_start();
+
+//if (isset($_COOKIE['is_login'])) { // ktra dữ liệu
+//    echo "{$_COOKIE['user_login']}"; // lấy ra cookie
+////    echo "Cookie:{$_COOKIE['user_login']}"; // lấy ra cookie
+//}
+
+require 'db/connect.php';
+require 'db/config.php';
+require 'db/email.php';
+require 'db/database.php';
+
+//Function: thư viện hàm
+require 'lib/validation.php';
+require 'lib/data.php';
+require 'lib/url.php';
+require 'lib/template.php';
+require 'lib/number.php';
+require 'lib/cart.php';
+require 'lib/users.php';
+require 'lib/pagging.php';
+require 'lib/product.php';
+require 'lib/search.php';
+require 'lib/page.php';
+require 'lib/post.php';
+require 'lib/slider.php';
+require 'lib/email.php';
 ?>
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Website bán laptop</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
-    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<?php
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+$mod = !empty($_GET['mod']) ? $_GET['mod'] : 'home';
+$act = !empty($_GET['act']) ? $_GET['act'] : 'main'; // action: hanh` dong
+$path = "modules/{$mod}/{$act}.php";
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    <div class="header sticky-top">
-        <?php include('includes/header.php'); ?>
-    </div>
 
-    <div class="main">
-        <div class="container">
-            <div class="left">
-                <?php include('includes/left.php'); ?>
-            </div>
+//Kiểm tra login
+//if (!is_login() && $mod != 'login' && $act != 'login') {
+//    // nếu is_login chưa login & page khác với login 
+//    // ex:họ chưa mua vé mà họ đã đi vào trong rap phim
+//    // tôi là người soát vé, tôi bảo họ là ra ngoài cổng mua vé mới đc vào
+//
+//    redirect_to("?mod=users&act=login"); // => tôi dẫn họ đến chỗ mua vé ~~ login
+//}
 
-            <div class="middle">
-                <?php include('chuyentrang.php'); ?>
-            </div>
 
-            <div class="right">
-                <?php include('includes/right.php'); ?>
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">
-        <?php include('includes/footer.php'); ?>
-    </div>
-</body>
-</html>
+if (file_exists($path)) {
+    require $path;
+} else {
+    require './inc/404.php';
+}
+?>
